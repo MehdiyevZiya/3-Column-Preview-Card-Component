@@ -1,0 +1,130 @@
+:root {
+    /* Colors */
+
+     /* Primary */
+    --Bright_orange: hsl(31, 77%, 52%);
+    --Dark_cyan: hsl(184, 100%, 22%);
+    --Very_dark_cyan: hsl(179, 100%, 13%);
+
+    /* Neutral */
+    --Transparent_white_paragraphs: hsla(0, 0%, 100%, 0.75);
+    --Very_light_gray_background_headings_buttons: hsl(0, 0%, 95%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-size: 15px;
+    background-color: var(--Very_light_gray_background_headings_buttons);
+    color: var(--Transparent_white_paragraphs);
+    min-height: 100vh;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-width: 51rem;
+    margin: 0 2rem;
+    display: flex;
+    max-width: 55rem;
+}
+.box {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.sedan {
+    background-color: var(--Bright_orange);
+}
+.suv {
+    background-color: var(--Dark_cyan);
+}
+.luxury {
+    background-color: var(--Very_dark_cyan);
+}
+.box h1 {
+    font-family: "Big Shoulders Display", cursive;
+    text-transform: uppercase;
+    color: var(--Very_light_gray_background_headings_buttons);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.box p {
+    line-height: 1.5;
+    font-family: "Lexend Deca", sans-serif;
+}
+.box a {
+    font-family: "Lexend Deca", sans-serif;
+    background-color: var(--Very_light_gray_background_headings_buttons);
+    text-decoration: none;
+    text-align: center;
+    user-select: none;
+    font-weight: 600;
+    margin-top: 4rem;
+    border: 2px solid hsl(0, 0%, 95%);
+    padding: 0.8rem 2rem;
+    border-radius: 1.5rem;
+    transition: all .3s ease-in-out;
+}
+.sedan a {
+    color: var(--Bright_orange);
+}
+.suv a {
+    color: var(--Dark_cyan);
+}
+.luxury a {
+    color: var(--Very_dark_cyan);
+}
+.box a:hover {
+    color: var(--Very_light_gray_background_headings_buttons);
+    background: transparent;
+    cursor: pointer;
+}
+span {
+    white-space: nowrap
+  }
+.attribution {
+    margin-top: 2rem;
+    width: 100%;
+    color: darkgray;
+    text-align: center;
+  }
+.attribution a {
+    text-decoration: none;
+    color: black;
+  }
+.attribution a:hover {
+    color: darkgray;
+  }
+@media screen and (max-width: 768px){
+    .container {
+        margin: 6rem 1.5rem 0;
+        flex-direction: column;
+    }
+    .box h1 {
+        margin: 1rem 0;
+    }
+    .box a {
+        margin-top: 2rem;
+    }
+    .attribution {
+        margin-bottom: 1rem;
+    }
+   
+    }
+  @media screen and (max-width: 425px){
+    .container {
+        margin: 4.5rem 1rem 0;
+    }
+    .attribution a {
+        display: block;
+    }
+  }
